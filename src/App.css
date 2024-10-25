@@ -1,38 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 50%;
+  margin: 0 auto;
+}
+.App h1{
+  font-size: 3rem;
+  color: #333;
+  margin: 1rem 0;
+}
+.add-task input{
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.add-task button{
+  padding: 0.5rem 1rem;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.list-task button{
+  padding: 0.5rem 1rem;
+  background-color: rgb(113, 206, 113);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+  width: 100px;
+}
+.list-task button:hover{
+  background-color: green;
+}
+.task{
+  margin-top: 3rem;
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.task input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  accent-color: green;
+}
+.task-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+.task-item button{
+  background-color: rgb(113, 206, 113);
+}
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 90%;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
